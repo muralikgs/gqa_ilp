@@ -1,0 +1,424 @@
+9
+Predicted Answer: no	Right Answer: yes
+Question: Do the man jeans look dark?
+FF      : select: man (4486961)->relate: jeans,of,s (4486963) [0]->verify color: dark [1]
+target(A,B,C) :- of(B,A),attribute(B,C) 
+target(16,15,137)
+
+
+20
+Predicted Answer: yes	Right Answer: no
+Question: Is the man to the left of a cell phone?
+FF      : select: cell phone (1174394)->verify rel: man,to the left of,s (1174395) [0]
+target(A,B) :- to_the_left_of(A,B) 
+target(10,11)
+
+
+28
+Predicted Answer: yes	Right Answer: no
+Question: Is the large window above the black sign?
+FF      : select: sign (1256977)->filter color: black [0]->verify rel: window,above,s (1256980) [1]
+target(A,B,C) :- attribute(A,B),above(A,C) 
+target(4,40,5)
+
+
+34
+Predicted Answer: yes	Right Answer: no
+Question: Is the mirror to the left of a girl?
+FF      : select: girl (2222338)->verify rel: mirror,to the left of,s (2250081) [0]
+target(A,B) :- to_the_left_of(A,B) 
+target(3,2)
+
+
+48
+Predicted Answer: yes	Right Answer: no
+Question: Is the spectator to the left of the people on the bleachers?
+FF      : select: bleachers (3632216)->relate: people,on,s (2550539) [0]->verify rel: spectator,to the left of,s (2576083) [1]
+target(A,B,C) :- on(B,A),to_the_left_of(B,C) 
+target(7,5,6)
+
+
+112
+Predicted Answer: yes	Right Answer: no
+Question: Is the laptop to the left of the device in the middle of the photo?
+FF      : select: device (1110199)->filter vposition: middle [0]->verify rel: laptop,to the left of,s (1110181) [1]
+target(A,B,C) :- vpos(A,B),to_the_left_of(A,C) 
+target(9,2,19)
+
+
+125
+Predicted Answer: no	Right Answer: yes
+Question: Are there toilets near the shower curtain that is dark and blue?
+FF      : select: shower curtain (1196679)->filter color: dark [0]->filter color: blue [1]->relate: toilet,near,s (1196675) [2]->exist: ? [3]
+target(A,B,C,D) :- attribute(A,B),attribute(A,C),near(D,A),exist(D) 
+target(4,137,46,0)
+
+
+155
+Predicted Answer: no	Right Answer: yes
+Question: Are there pictures to the right of the curtains that are white and pink?
+FF      : select: curtains (4636871)->filter color: white [0]->filter color: pink [1]->relate: picture,to the right of,s (4636888) [2]->exist: ? [3]
+target(A,B,C,D) :- attribute(A,B),attribute(A,C),to_the_right_of(D,A),exist(D) 
+target(15,593,372,4)
+
+
+170
+Predicted Answer: yes	Right Answer: no
+Question: Are the people to the right of the car that is to the left of the bus?
+FF      : select: bus (2902938)->relate: car,to the left of,s (2224734) [0]->verify rel: people,to the right of,s (3497769) [1]
+target(A,B,C) :- to_the_left_of(B,A),to_the_right_of(B,C) 
+target(9,15,7)
+
+
+181
+Predicted Answer: no	Right Answer: yes
+Question: Are there any boxes to the right of the mouse that the keyboard is to the left of?
+FF      : select: keyboard (3027111)->relate: computer mouse,to the left of,o (3369758) [0]->relate: box,to the right of,s (2310004) [1]->exist: ? [2]
+target(A,B,C) :- to_the_left_of(B,A),to_the_right_of(C,B),exist(C) 
+target(13,1,14)
+
+
+186
+Predicted Answer: yes	Right Answer: no
+Question: Is the large carrot to the left of the pepper that looks green?
+FF      : select: pepper (496360)->filter color: green [0]->verify rel: carrot,to the left of,s (496359) [1]
+target(A,B,C) :- attribute(A,B),to_the_left_of(A,C) 
+target(5,233,1)
+
+
+227
+Predicted Answer: yes	Right Answer: no
+Question: Does the comforter have a different color than the bed?
+FF      : select: comforter (837561)->select: bed (837558) ->different color:  [0, 1]
+target(A,B,C,D) :- attribute(A,C),attribute(B,D),not(same(C,D)) 
+target(11,4,_,_)
+
+
+228
+Predicted Answer: no	Right Answer: yes
+Question: Are there any napkins next to the cup the coffee is inside of?
+FF      : select: coffee (3564949)->relate: cup,inside,o (1695238) [0]->relate: napkin,next to,s (3169458) [1]->exist: ? [2]
+target(A,B,C) :- inside(B,A),next_to(C,B),exist(C) 
+target(0,8,3)
+
+
+260
+Predicted Answer: yes	Right Answer: no
+Question: Is the silver car to the right of a man?
+FF      : select: man (3858888)->verify rel: car,to the right of,s (1722306) [0]
+target(A,B) :- to_the_right_of(A,B) 
+target(14,0)
+
+
+266
+Predicted Answer: yes	Right Answer: no
+Question: Is the van to the left of a vehicle?
+FF      : select: vehicle (212412)->verify rel: van,to the left of,s (212410) [0]
+target(A,B) :- to_the_left_of(A,B) 
+target(10,9)
+
+
+274
+Predicted Answer: yes	Right Answer: no
+Question: Is the red car to the left of a person?
+FF      : select: person (1026896)->verify rel: car,to the left of,s (1026899) [0]
+target(A,B) :- to_the_left_of(A,B) 
+target(27,22)
+
+
+296
+Predicted Answer: no	Right Answer: yes
+Question: Are there plates on the shelf the cups are to the left of?
+FF      : select: cups (211221)->relate: shelf,to the left of,o (211227) [0]->relate: plates,on,s (211219) [1]->exist: ? [2]
+target(A,B,C) :- to_the_left_of(B,A),on(C,B),exist(C) 
+target(14,8,22)
+
+
+300
+Predicted Answer: yes	Right Answer: no
+Question: Is the can to the right of a bag?
+FF      : select: bag (802596)->verify rel: can,to the right of,s (802595) [0]
+target(A,B) :- to_the_right_of(A,B) 
+target(3,6)
+
+
+327
+Predicted Answer: yes	Right Answer: no
+Question: Is the kid to the right of a person?
+FF      : select: person (259573)->verify rel: child,to the right of,s (259553) [0]
+target(A,B) :- to_the_right_of(A,B) 
+target(15,13)
+
+
+330
+Predicted Answer: no	Right Answer: yes
+Question: Is the ketchup bottle that looks white and red made of plastic?
+FF      : select: ketchup bottle (219423)->filter color: white [0]->filter color: red [1]->verify material: plastic [2]
+target(A,B,C,D) :- attribute(A,B),attribute(A,C),attribute(A,D) 
+target(3,593,409,376)
+
+
+344
+Predicted Answer: yes	Right Answer: no
+Question: Is the tree in front of the bench that is gray?
+FF      : select: bench (267575)->filter color: gray [0]->verify rel: tree,in front of,s (267582) [1]
+target(A,B,C) :- attribute(A,B),in_front_of(A,C) 
+target(3,230,7)
+
+
+345
+Predicted Answer: yes	Right Answer: no
+Question: Is the man to the left of a bag?
+FF      : select: bag (2047548)->verify rel: man,to the left of,s (2330252) [0]
+target(A,B) :- to_the_left_of(A,B) 
+target(3,8)
+
+
+348
+Predicted Answer: yes	Right Answer: no
+Question: Is the large vehicle to the left of a traffic light?
+FF      : select: traffic light (1023515)->verify rel: bus,to the left of,s (1023506) [0]
+target(A,B) :- to_the_left_of(A,B) 
+target(18,6)
+
+
+373
+Predicted Answer: no	Right Answer: yes
+Question: Does the remote control that is gray and white seem to be dirty?
+FF      : select: remote control (969744)->filter color: gray [0]->filter color: white [1]->verify cleanliness: dirty [2]
+target(A,B,C,D) :- attribute(A,B),attribute(A,C),attribute(A,D) 
+target(14,230,593,153)
+
+
+381
+Predicted Answer: no	Right Answer: yes
+Question: Are there chairs to the right of the umbrella that looks white and blue?
+FF      : select: umbrella (253534)->filter color: white [0]->filter color: blue [1]->relate: chair,to the right of,s (253524) [2]->exist: ? [3]
+target(A,B,C,D) :- attribute(A,B),attribute(A,C),to_the_right_of(D,A),exist(D) 
+target(2,593,46,10)
+
+
+409
+Predicted Answer: yes	Right Answer: no
+Question: Is the bike to the right of the bag that is to the left of the phone?
+FF      : select: phone (1195850)->relate: bag,to the left of,s (1195858) [0]->verify rel: bike,to the right of,s (1195855) [1]
+target(A,B,C) :- to_the_left_of(B,A),to_the_right_of(B,C) 
+target(5,0,10)
+
+
+417
+Predicted Answer: yes	Right Answer: no
+Question: Is the tall person behind the wall?
+FF      : select: wall (419332)->verify rel: man,behind,s (419328) [0]
+target(A,B) :- behind(A,B) 
+target(8,2)
+
+
+518
+Predicted Answer: yes	Right Answer: no
+Question: Is the dog to the left of a person?
+FF      : select: person (2341215)->verify rel: dog,to the left of,s (2108928) [0]
+target(A,B) :- to_the_left_of(A,B) 
+target(5,11)
+
+
+548
+Predicted Answer: yes	Right Answer: no
+Question: Is the white device to the left of the small chair?
+FF      : select: chair (590166)->filter size: small [0]->verify rel: phone,to the left of,s (590165) [1]
+target(A,B,C) :- attribute(A,B),to_the_left_of(A,C) 
+target(9,476,10)
+
+
+568
+Predicted Answer: no	Right Answer: yes
+Question: Do you see people to the left of the umbrella in the center of the photo?
+FF      : select: umbrella (3029866)->filter vposition: middle [0]->relate: people,to the left of,s (3039980) [1]->exist: ? [2]
+target(A,B,C) :- vpos(A,B),to_the_left_of(C,A),exist(C) 
+target(14,2,5)
+
+
+575
+Predicted Answer: yes	Right Answer: no
+Question: Is the plastic chair to the left of the white boat?
+FF      : select: boat (1267132)->filter color: white [0]->verify rel: chair,to the left of,s (1267118) [1]
+target(A,B,C) :- attribute(A,B),to_the_left_of(A,C) 
+target(7,593,1)
+
+
+618
+Predicted Answer: yes	Right Answer: no
+Question: Is the glass bowl to the left of the blue plate?
+FF      : select: plate (4592289)->filter color: blue [0]->verify rel: bowl,to the left of,s (4592302) [1]
+target(A,B,C) :- attribute(A,B),to_the_left_of(A,C) 
+target(5,46,1)
+
+
+635
+Predicted Answer: yes	Right Answer: no
+Question: Is the tablecloth to the right of the person that is wearing a watch?
+FF      : select: watch (957120)->relate: person,wearing,s (957119) [0]->verify rel: tablecloth,to the right of,s (957124) [1]
+target(A,B,C) :- wearing(B,A),to_the_right_of(B,C) 
+target(18,5,2)
+
+
+651
+Predicted Answer: yes	Right Answer: no
+Question: Is the taxi cab to the left of the people that walk in the city?
+FF      : select: city (4422836)->relate: people,walking in,s (4422837) [0]->verify rel: taxi,to the left of,s (4422847) [1]
+target(A,B,C) :- walking_in(B,A),to_the_left_of(B,C) 
+target(1,2,15)
+
+
+719
+Predicted Answer: yes	Right Answer: no
+Question: Is the woman to the left of the shelf?
+FF      : select: shelf (2824948)->verify rel: woman,to the left of,s (3203957) [0]
+target(A,B) :- to_the_left_of(A,B) 
+target(24,5)
+
+
+745
+Predicted Answer: no	Right Answer: yes
+Question: Do you see a bottle under the table that the horse is on?
+FF      : select: horse (2108847)->relate: table,on,o (2175139) [0]->relate: bottle,under,s (2061497) [1]->exist: ? [2]
+target(A,B,C) :- on(B,A),under(C,B),exist(C) 
+target(13,16,0)
+
+
+751
+Predicted Answer: yes	Right Answer: no
+Question: Is the container to the left of the man that is wearing a shirt?
+FF      : select: shirt (933005)->relate: man,wearing,s (932986) [0]->verify rel: container,to the left of,s (932996) [1]
+target(A,B,C) :- wearing(B,A),to_the_left_of(B,C) 
+target(20,11,4)
+
+
+760
+Predicted Answer: yes	Right Answer: no
+Question: Is the man to the right of a suitcase?
+FF      : select: suitcase (2803141)->verify rel: man,to the right of,s (2743319) [0]
+target(A,B) :- to_the_right_of(A,B) 
+target(15,26)
+
+
+769
+Predicted Answer: yes	Right Answer: no
+Question: Is the child to the right of the animal that is wearing a collar?
+FF      : select: collar (2632958)->relate: animal,wearing,s (2587535) [0]->verify rel: child,to the right of,s (1877717) [1]
+target(A,B,C) :- wearing(B,A),to_the_right_of(B,C) 
+target(16,25,12)
+
+
+775
+Predicted Answer: yes	Right Answer: no
+Question: Is the red bag to the left of the guy with the glasses?
+FF      : select: glasses (2317034)->relate: guy,with,s (1975323) [0]->verify rel: bag,to the left of,s (2327195) [1]
+target(A,B,C) :- with(B,A),to_the_left_of(B,C) 
+target(11,15,9)
+
+
+796
+Predicted Answer: yes	Right Answer: no
+Question: Is the train to the right of a man?
+FF      : select: man (2700108)->verify rel: train,to the right of,s (1740971) [0]
+target(A,B) :- to_the_right_of(A,B) 
+target(15,9)
+
+
+799
+Predicted Answer: no	Right Answer: yes
+Question: Does the sheep's hair look long?
+FF      : select: sheep (3779914)->relate: hair,of,s (845379) [0]->verify length: long [1]
+target(A,B,C) :- of(B,A),attribute(B,C) 
+target(34,16,291)
+
+
+827
+Predicted Answer: no	Right Answer: yes
+Question: Do you see a ball to the left of the tennis racket that the girl is holding?
+FF      : select: girl (507461)->relate: racket,holding,o (507471) [0]->relate: ball,to the left of,s (507466) [1]->exist: ? [2]
+target(A,B,C) :- holding(B,A),to_the_left_of(C,B),exist(C) 
+target(21,6,16)
+
+
+830
+Predicted Answer: no	Right Answer: yes
+Question: Is there a chair to the right of the sofa that is cream-colored and tan?
+FF      : select: sofa (1621638)->filter color: cream colored [0]->filter color: tan [1]->relate: chair,to the right of,s (1621593) [2]->exist: ? [3]
+target(A,B,C,D) :- attribute(A,B),attribute(A,C),to_the_right_of(D,A),exist(D) 
+target(10,114,529,18)
+
+
+842
+Predicted Answer: yes	Right Answer: no
+Question: Is the man to the left of the chair?
+FF      : select: chair (1023076)->verify rel: man,to the left of,s (1023074) [0]
+target(A,B) :- to_the_left_of(A,B) 
+target(8,6)
+
+
+900
+Predicted Answer: yes	Right Answer: no
+Question: Is the metal fence to the right of the barn made of wood?
+FF      : select: barn (2598696)->filter material: wood [0]->verify rel: fence,to the right of,s (1929959) [1]
+target(A,B,C) :- attribute(A,B),to_the_right_of(A,C) 
+target(18,605,9)
+
+
+913
+Predicted Answer: no	Right Answer: yes
+Question: Do you see any grapes near the vegetable the food is to the left of?
+FF      : select: food (3806067)->relate: vegetable,to the left of,o (1086868) [0]->relate: grapes,near,s (1086869) [1]->exist: ? [2]
+target(A,B,C) :- to_the_left_of(B,A),near(C,B),exist(C) 
+target(5,1,2)
+
+
+928
+Predicted Answer: no	Right Answer: yes
+Question: Are there men to the left of the phone the lady is using?
+FF      : select: lady (296869)->relate: phone,using,o (296829) [0]->relate: man,to the left of,s (296857) [1]->exist: ? [2]
+target(A,B,C) :- using(B,A),to_the_left_of(C,B),exist(C) 
+target(18,15,22)
+
+
+934
+Predicted Answer: yes	Right Answer: no
+Question: Is the guy to the left of a man?
+FF      : select: man (2409087)->verify rel: guy,to the left of,s (2136855) [0]
+target(A,B) :- to_the_left_of(A,B) 
+target(0,8)
+
+
+935
+Predicted Answer: no	Right Answer: yes
+Question: Do you think her nose is red?
+FF      : select: she (4519239)->relate: nose,of,s (4047976) [0]->verify color: red [1]
+target(A,B,C) :- of(B,A),attribute(B,C) 
+target(6,9,409)
+
+
+939
+Predicted Answer: yes	Right Answer: no
+Question: Is the nightstand to the left of the chair that is in the center?
+FF      : select: chair (1194069)->filter vposition: middle [0]->verify rel: nightstand,to the left of,s (1194066) [1]
+target(A,B,C) :- vpos(A,B),to_the_left_of(A,C) 
+target(17,2,12)
+
+
+955
+Predicted Answer: no	Right Answer: yes
+Question: Are there any cans to the left of the coffee cups in the bottom of the image?
+FF      : select: coffee cups (4279944)->filter vposition: bottom [0]->relate: cans,to the left of,s (4280002) [1]->exist: ? [2]
+target(A,B,C) :- vpos(A,B),to_the_left_of(C,A),exist(C) 
+target(31,1,20)
+
+
+987
+Predicted Answer: yes	Right Answer: no
+Question: Is the tomato to the right of the lettuce?
+FF      : select: lettuce (939713)->verify rel: tomato,to the right of,s (939714) [0]
+target(A,B) :- to_the_right_of(A,B) 
+target(0,3)
+
+

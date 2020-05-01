@@ -1,0 +1,135 @@
+and
+choose
+choose activity
+choose age
+choose brightness
+choose cleanliness
+choose color
+choose company
+choose depth
+choose face expression
+choose fatness
+choose flavor
+choose gender
+choose hardness
+choose healthier
+choose height
+choose hposition
+choose larger
+choose length
+choose less healthy
+choose location
+choose lower
+choose material
+choose name
+choose older
+choose opaqness
+choose pattern
+choose place
+choose pose
+choose race
+choose realism
+choose rel
+choose shape
+choose shorter
+choose size
+choose smaller
+choose sportActivity
+choose state
+choose taller
+choose thickness
+choose tone
+choose vposition
+choose weather
+choose weight
+choose width
+choose younger
+common
+different
+different color
+different shape
+exist
+filter
+filter activity
+filter age
+filter brightness
+filter cleanliness
+filter color
+filter company
+filter depth
+filter event
+filter face expression
+filter fatness
+filter flavor
+filter gender
+filter hardness
+filter height
+filter hposition
+filter length
+filter liquid
+filter material
+filter opaqness
+filter orientation
+filter pattern
+filter pose
+filter race
+filter realism
+filter room
+filter shape
+filter size
+filter sport
+filter sportActivity
+filter state
+filter texture
+filter thickness
+filter tone
+filter vposition
+filter weather
+filter weight
+filter width
+or
+query
+relate
+same
+same color
+same material
+same shape
+select
+verify
+verify activity
+verify age
+verify brightness
+verify cleanliness
+verify color
+verify company
+verify depth
+verify face expression
+verify fatness
+verify flavor
+verify gender
+verify hardness
+verify height
+verify hposition
+verify length
+verify location
+verify material
+verify opaqness
+verify pattern
+verify place
+verify pose
+verify race
+verify realism
+verify rel
+verify room
+verify shape
+verify size
+verify sportActivity
+verify state
+verify texture
+verify thickness
+verify tone
+verify type
+verify vposition
+verify weather
+verify weight
+verify width

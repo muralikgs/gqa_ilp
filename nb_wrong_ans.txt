@@ -1,0 +1,48 @@
+6
+Predicted Answer: left	Right Answer: right
+Question: Is the freezer to the right or to the left of the glasses the woman is wearing?
+FF      : select: woman (746243)->relate: glasses,wearing,o (746249) [0]->choose rel: refrigerator,to the right of|to the left of,s (746244) [1]
+target(A,B,C) :- wearing(B,A),to_the_right_of(C,B) 
+target(14,8,13)
+
+
+13
+Predicted Answer: left	Right Answer: right
+Question: Is the fork to the left or to the right of the plate the biscuit is sitting on?
+FF      : select: biscuit (4382249)->relate: plate,sitting on,o (4382220) [0]->choose rel: fork,to the right of|to the left of,s (4382239) [1]
+target(A,B,C) :- sitting_on(B,A),to_the_right_of(C,B) 
+target(11,0,10)
+
+
+19
+Predicted Answer: left	Right Answer: right
+Question: Is the brown fence to the left or to the right of the helmet that the man is wearing?
+FF      : select: man (4598159)->relate: helmet,wearing,o (4598201) [0]->choose rel: fence,to the right of|to the left of,s (4598169) [1]
+target(A,B,C) :- wearing(B,A),to_the_right_of(C,B) 
+target(1,12,2)
+
+
+34
+Predicted Answer: right	Right Answer: left
+Question: Is the boy to the right or to the left of the skis the man is with?
+FF      : select: man (4618765)->relate: skis,with,o (4607185) [0]->choose rel: boy,to the left of|to the right of,s (4607253) [1]
+target(A,B,C) :- with(B,A),to_the_left_of(C,B) 
+target(40,13,19)
+
+
+70
+Predicted Answer: left	Right Answer: right
+Question: Is the small bowl to the left or to the right of the bag the buns are in?
+FF      : select: buns (1171751)->relate: bag,in,o (1171750) [0]->choose rel: bowl,to the right of|to the left of,s (1171746) [1]
+target(A,B,C) :- in(B,A),to_the_right_of(C,B) 
+target(19,20,4)
+
+
+85
+Predicted Answer: right	Right Answer: left
+Question: Is he to the left or to the right of the white fence?
+FF      : select: he (4032782)->choose rel: man,to the left of|to the right of,s (4032782) [0]
+target(A,B) :- to_the_left_of(B,A) 
+target(15,15)
+
+
